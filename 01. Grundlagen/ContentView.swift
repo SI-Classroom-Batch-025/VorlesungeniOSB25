@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  VorlesungeniOSB25
+//  01 Grundlagen
 //
 //  Created by Felix B on 10.03.25.
 //
