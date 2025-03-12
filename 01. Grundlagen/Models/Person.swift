@@ -11,4 +11,5 @@ struct Person {
     let age: Int
     let name: String
     let height: Double
+    let image: String
 }
