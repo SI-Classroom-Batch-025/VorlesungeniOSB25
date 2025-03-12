@@ -16,11 +16,11 @@ struct PersonView: View {
     var body: some View {
         VStack {
             Image(person.image)
-                .resizable()
+                .resizable() 
                 .scaledToFill()
                 .frame(height: 100)
                 .padding()
-                .clipShape(.circle)
+                .clipShape(.circle) // Lässt unser Bild als ein Kreis erscheinen
             
             Text("Name der Person: \(person.name)")
                 .bold()
@@ -37,9 +37,9 @@ struct PersonView: View {
                 Button("Kontakt") {
                     print(person.age)
                 }
-                .buttonStyle(.borderedProminent)
-                .tint(.yellow)
-                .foregroundStyle(.black)
+                .buttonStyle(.borderedProminent) // Verändert das aussehen des Buttons
+                .tint(.yellow) // Farbe des Buttons
+                .foregroundStyle(.black) // Farbe des Textes auf dem Button
                 .clipShape(.ellipse)
             }
             
@@ -58,7 +58,7 @@ struct PersonView: View {
                 Rectangle()
                     .clipShape(.buttonBorder)
                     .foregroundStyle(
-                        LinearGradient(colors: [.white, .green, .white], startPoint: .leading, endPoint: .trailing)
+                        LinearGradient(colors: [.white, .green, .white], startPoint: .leading, endPoint: .trailing) // Lernen wir noch in folgenden Wochen
                     )
             }
             

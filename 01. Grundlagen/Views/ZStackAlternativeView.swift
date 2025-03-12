@@ -24,11 +24,11 @@ struct ZStackAlternativeView: View {
             //.background(.green)
         }
         .padding()
-        .frame(maxWidth: .infinity)
-        .background(Image("cloud"))
+        .frame(maxWidth: .infinity) // Strecken die View auf die maximale Breite des Bildschirms
+        .background(Image("cloud")) // Legt eine View unter die View, auf der der Modifiert angewendet wurde
         .overlay {
             Text("Ich bin in der Mitte!")
-        }
+        } // Legt eine View über die View, auf der der Modifier angewendet wurde
     }
 }
 

@@ -31,9 +31,9 @@ struct BookListView: View {
                 BookView(book: books[2])
                 BookView(book: books[2])
             }
-            .padding(.vertical)
+            .padding(.vertical) // Abstand oben und unten
         }
-        .padding(.bottom)
+        .padding(.bottom) // Abstand unten
         ScrollView {
             BookView(book: books[0])
             BookView(book: books[1])

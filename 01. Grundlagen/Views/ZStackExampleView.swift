@@ -9,10 +9,10 @@ import SwiftUI
 
 struct ZStackExampleView: View {
     var body: some View {
-        ZStack {
+        ZStack { // ZStack lohnt sich erst wirklich, ab vielen Views die wird überlagern wollen, z.B. einen Kartenstapel oder ähnliches.
             Image("cloud")
                 .resizable()
-                .ignoresSafeArea()
+                .ignoresSafeArea() // Lässt das Bild über den für die Views vorgesehen Bereich hinausgehen, ist dafür da um die weißen Ränder oben und unten wegzubekommen
             VStack {
                 VStack {
                     Text("Ich bin oben Links!")
