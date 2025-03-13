@@ -22,15 +22,20 @@ struct BookView: View {
             VStack(alignment: .leading) {
                 Text(book.name)
                     .font(.title3)
-                    .bold()
+                    .fontWeight(.black)
+                    //.padding()
+                    //.border(.red, width: 2)
+                
                 Divider()
                 HStack {
                     Text("von \(book.author)")
+                        //.font(.system(size: 20))
                     //.foregroundStyle(.myBlue)
                     //.padding(.trailing, 20)
                     Divider()
                     Text("\(book.rating) Sterne")
                 }
+                .font(.system(size: 14))
             }
         }
         .padding()

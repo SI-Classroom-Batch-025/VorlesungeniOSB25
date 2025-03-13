@@ -20,7 +20,8 @@ struct HorizontalTextView: View {
         }
         .padding()
         .background(.green)
-        //.padding()
+        .padding(5)
+        .border(.green, width: 3)
     }
 }
 

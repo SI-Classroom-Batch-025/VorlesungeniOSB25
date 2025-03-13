@@ -27,7 +27,7 @@ struct MultipleTextView: View {
         }
         .padding()
         //.background(.red)
-       
+        .background(BackgroundView())
     }
 }
 

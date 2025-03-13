@@ -25,7 +25,10 @@ struct ZStackAlternativeView: View {
         }
         .padding()
         .frame(maxWidth: .infinity) // Strecken die View auf die maximale Breite des Bildschirms
-        .background(Image("cloud")) // Legt eine View unter die View, auf der der Modifiert angewendet wurde
+        .background(
+            Image("cloud")
+                .blur(radius: 10)
+        ) // Legt eine View unter die View, auf der der Modifiert angewendet wurde
         .overlay {
             Text("Ich bin in der Mitte!")
         } // Legt eine View über die View, auf der der Modifier angewendet wurde
