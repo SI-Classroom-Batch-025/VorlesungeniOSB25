@@ -15,6 +15,10 @@ struct ContentView: View {
             .foregroundStyle(Color.cyan)
             .bold()
             .italic()
+        Button("Hallo!") {
+            
+        }
+        .appButtonStyle()
     }
 }
 
