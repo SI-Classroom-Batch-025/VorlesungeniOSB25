@@ -9,6 +9,7 @@
 /* Begin PBXFileReference section */
 		DE46F29B2D7ED26C00C62C53 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		DE46F3D22D7F16A000C62C53 /* 01. Grundlagen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "01. Grundlagen.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE46F6892D841AC900C62C53 /* 01. Grundlagen WH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "01. Grundlagen WH.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -17,10 +18,22 @@
 			path = "01. Grundlagen";
 			sourceTree = "<group>";
 		};
+		DE46F68A2D841AC900C62C53 /* 01. Grundlagen WH */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "01. Grundlagen WH";
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		DE46F3CF2D7F16A000C62C53 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE46F6862D841AC900C62C53 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -35,6 +48,7 @@
 			children = (
 				DE46F29B2D7ED26C00C62C53 /* .gitignore */,
 				DE46F3D32D7F16A000C62C53 /* 01. Grundlagen */,
+				DE46F68A2D841AC900C62C53 /* 01. Grundlagen WH */,
 				DE46F28B2D7ED25200C62C53 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				DE46F3D22D7F16A000C62C53 /* 01. Grundlagen.app */,
+				DE46F6892D841AC900C62C53 /* 01. Grundlagen WH.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -72,6 +87,28 @@
 			productReference = DE46F3D22D7F16A000C62C53 /* 01. Grundlagen.app */;
 			productType = "com.apple.product-type.application";
 		};
+		DE46F6882D841AC900C62C53 /* 01. Grundlagen WH */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE46F6962D841ACB00C62C53 /* Build configuration list for PBXNativeTarget "01. Grundlagen WH" */;
+			buildPhases = (
+				DE46F6852D841AC900C62C53 /* Sources */,
+				DE46F6862D841AC900C62C53 /* Frameworks */,
+				DE46F6872D841AC900C62C53 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				DE46F68A2D841AC900C62C53 /* 01. Grundlagen WH */,
+			);
+			name = "01. Grundlagen WH";
+			packageProductDependencies = (
+			);
+			productName = "01. Grundlagen WH";
+			productReference = DE46F6892D841AC900C62C53 /* 01. Grundlagen WH.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -83,6 +120,9 @@
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					DE46F3D12D7F16A000C62C53 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					DE46F6882D841AC900C62C53 = {
 						CreatedOnToolsVersion = 16.0;
 					};
 				};
@@ -102,6 +142,7 @@
 			projectRoot = "";
 			targets = (
 				DE46F3D12D7F16A000C62C53 /* 01. Grundlagen */,
+				DE46F6882D841AC900C62C53 /* 01. Grundlagen WH */,
 			);
 		};
 /* End PBXProject section */
@@ -114,10 +155,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DE46F6872D841AC900C62C53 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DE46F3CE2D7F16A000C62C53 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE46F6852D841AC900C62C53 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -302,6 +357,62 @@
 			};
 			name = Release;
 		};
+		DE46F6942D841ACB00C62C53 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"01. Grundlagen WH/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "de.syntax.-1--Grundlagen-WH";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DE46F6952D841ACB00C62C53 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"01. Grundlagen WH/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "de.syntax.-1--Grundlagen-WH";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -319,6 +430,15 @@
 			buildConfigurations = (
 				DE46F3DE2D7F16A100C62C53 /* Debug */,
 				DE46F3DF2D7F16A100C62C53 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE46F6962D841ACB00C62C53 /* Build configuration list for PBXNativeTarget "01. Grundlagen WH" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE46F6942D841ACB00C62C53 /* Debug */,
+				DE46F6952D841ACB00C62C53 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
