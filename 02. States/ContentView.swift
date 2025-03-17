@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
+    // States bieten uns die Möglichkeit Zustände zu speichern und anzupassen, structs an sich sind ja unveränderbar, states ermöglichen aber änderungen.
     @State private var number = 0
     // @State private var counter = 0
     @State private var background: Color = .gray
@@ -25,6 +26,7 @@ struct ContentView: View {
             
             ContactView()
             
+            // Ein toggle ist im Endeffekt ein Stateful Button, welcher an oder aus sein kann
             Toggle(isOn: $isNotificationOn) {
                 Text("Notification is \(isNotificationOn)")
             }

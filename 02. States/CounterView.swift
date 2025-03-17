@@ -9,8 +9,10 @@ import SwiftUI
 
 struct CounterView: View {
     
+    // Binding ist eine "Verbindung" zu einer übergebenen State Variable, bindings werden nie initialisiert (sprich hier kommt kein gleichzeichen hin!)
     @Binding var counter: Int
     
+    // Computed properties erneuern auch views, wenn die property von einem State oder Binding abhängig ist.
     var isEven: Bool {
         counter % 2 == 0
     }

@@ -19,7 +19,7 @@ struct DarkmodeView: View {
             Toggle(isOn: $isDarkMode) {
                 Text("Darkmode is \(isDarkMode)")
             }
-            .tint(.yellow)
+            .tint(.yellow) // Damit färben wir den "isOn" Togglebackground in eine von uns gewünschte farbe 
             
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
