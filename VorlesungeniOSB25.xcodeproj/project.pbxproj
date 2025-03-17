@@ -10,6 +10,7 @@
 		DE46F29B2D7ED26C00C62C53 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		DE46F3D22D7F16A000C62C53 /* 01. Grundlagen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "01. Grundlagen.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE46F6892D841AC900C62C53 /* 01. Grundlagen WH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "01. Grundlagen WH.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE46F72D2D880DD000C62C53 /* 02. States.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "02. States.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -21,6 +22,11 @@
 		DE46F68A2D841AC900C62C53 /* 01. Grundlagen WH */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "01. Grundlagen WH";
+			sourceTree = "<group>";
+		};
+		DE46F72E2D880DD000C62C53 /* 02. States */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "02. States";
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -40,6 +46,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DE46F72A2D880DD000C62C53 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -49,6 +62,7 @@
 				DE46F29B2D7ED26C00C62C53 /* .gitignore */,
 				DE46F3D32D7F16A000C62C53 /* 01. Grundlagen */,
 				DE46F68A2D841AC900C62C53 /* 01. Grundlagen WH */,
+				DE46F72E2D880DD000C62C53 /* 02. States */,
 				DE46F28B2D7ED25200C62C53 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -58,6 +72,7 @@
 			children = (
 				DE46F3D22D7F16A000C62C53 /* 01. Grundlagen.app */,
 				DE46F6892D841AC900C62C53 /* 01. Grundlagen WH.app */,
+				DE46F72D2D880DD000C62C53 /* 02. States.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -109,6 +124,28 @@
 			productReference = DE46F6892D841AC900C62C53 /* 01. Grundlagen WH.app */;
 			productType = "com.apple.product-type.application";
 		};
+		DE46F72C2D880DD000C62C53 /* 02. States */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE46F73A2D880DD200C62C53 /* Build configuration list for PBXNativeTarget "02. States" */;
+			buildPhases = (
+				DE46F7292D880DD000C62C53 /* Sources */,
+				DE46F72A2D880DD000C62C53 /* Frameworks */,
+				DE46F72B2D880DD000C62C53 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				DE46F72E2D880DD000C62C53 /* 02. States */,
+			);
+			name = "02. States";
+			packageProductDependencies = (
+			);
+			productName = "02. States";
+			productReference = DE46F72D2D880DD000C62C53 /* 02. States.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -123,6 +160,9 @@
 						CreatedOnToolsVersion = 16.0;
 					};
 					DE46F6882D841AC900C62C53 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					DE46F72C2D880DD000C62C53 = {
 						CreatedOnToolsVersion = 16.0;
 					};
 				};
@@ -143,6 +183,7 @@
 			targets = (
 				DE46F3D12D7F16A000C62C53 /* 01. Grundlagen */,
 				DE46F6882D841AC900C62C53 /* 01. Grundlagen WH */,
+				DE46F72C2D880DD000C62C53 /* 02. States */,
 			);
 		};
 /* End PBXProject section */
@@ -162,6 +203,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DE46F72B2D880DD000C62C53 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -173,6 +221,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		DE46F6852D841AC900C62C53 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE46F7292D880DD000C62C53 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -413,6 +468,62 @@
 			};
 			name = Release;
 		};
+		DE46F7382D880DD200C62C53 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"02. States/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "de.syntax.-2--States";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DE46F7392D880DD200C62C53 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"02. States/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "de.syntax.-2--States";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -439,6 +550,15 @@
 			buildConfigurations = (
 				DE46F6942D841ACB00C62C53 /* Debug */,
 				DE46F6952D841ACB00C62C53 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE46F73A2D880DD200C62C53 /* Build configuration list for PBXNativeTarget "02. States" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE46F7382D880DD200C62C53 /* Debug */,
+				DE46F7392D880DD200C62C53 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
