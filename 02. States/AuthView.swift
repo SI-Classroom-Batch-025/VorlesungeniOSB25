@@ -21,7 +21,7 @@ struct AuthView: View {
                 TextField("Username", text: $username)
                     .textFieldStyle(.roundedBorder)
                 // Man kann natürlich auch seinen eigenen Textfielstyle machen, textfelder die sicherheitshalber nicht einfach so eingesehen werden sollen, sind SecureField, dazu aber in den kommenden Tagen mehr!
-                TextField("Password", text: $password)
+                SecureField("Password", text: $password)
                     .textFieldStyle(.roundedBorder)
                     .padding(.bottom, 30)
                 
