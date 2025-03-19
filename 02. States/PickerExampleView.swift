@@ -13,16 +13,19 @@ struct PickerExampleView: View {
     @State private var counter = 0
     @State private var weightInput = ""
     
-    let fruits = [
+    var fruits = [
         "Apple",
         "Banana",
         "Strawberry",
         "Citrus",
         "Blueberry",
         "Peach",
-        "Kiwi",
         "Passionfruit"
     ]
+    
+//    func test() {
+//        $selectedFruit.wrappedValue
+//    }
     
     var body: some View {
         Picker("Pick a fruit", selection: $selectedFruit) {
@@ -30,7 +33,7 @@ struct PickerExampleView: View {
                 Text(fruit).tag(fruit)
             }
         }
-        //.pickerStyle(.segmented)
+        // .pickerStyle(.segmented)
         
         if selectedFruit == "Apple" {
             Text("Select amount in pieces: ")
@@ -39,6 +42,10 @@ struct PickerExampleView: View {
             Text("Select amount in KG")
             TextField("Gewicht angeben", text: $weightInput)
         }
+        
+//        Button("Add Kiwi") {
+//            fruits.append("Kiwi")
+//        }
     }
 }
 

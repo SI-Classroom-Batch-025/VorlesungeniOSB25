@@ -26,6 +26,7 @@
 				ContentView.swift,
 				CounterView.swift,
 				DarkmodeView.swift,
+				DatePickerExampleView.swift,
 				EnumPickerExampleView.swift,
 				ExampleNilView.swift,
 				ForYouPageView.swift,
@@ -55,6 +56,7 @@
 				ContentView.swift,
 				CounterView.swift,
 				DarkmodeView.swift,
+				DatePickerExampleView.swift,
 				EnumPickerExampleView.swift,
 				ExampleNilView.swift,
 				ForYouPageView.swift,
@@ -124,10 +126,10 @@
 		DE46F2812D7ED25200C62C53 = {
 			isa = PBXGroup;
 			children = (
-				DE46F9C32D8ABB6300C62C53 /* 02. States */,
 				DE46F29B2D7ED26C00C62C53 /* .gitignore */,
 				DE46F3D32D7F16A000C62C53 /* 01. Grundlagen */,
 				DE46F68A2D841AC900C62C53 /* 01. Grundlagen WH */,
+				DE46F9C32D8ABB6300C62C53 /* 02. States */,
 				DE46F28B2D7ED25200C62C53 /* Products */,
 			);
 			sourceTree = "<group>";

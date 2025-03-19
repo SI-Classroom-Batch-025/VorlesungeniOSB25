@@ -16,6 +16,8 @@ struct ContentView: View {
     @State private var isNotificationOn = false
     @State private var inputText = ""
         
+    @State private var selectedElement = ""
+    
     var body: some View {
         VStack {
             CounterView(counter: $number)
@@ -37,6 +39,11 @@ struct ContentView: View {
                 .padding(.horizontal)
                 .background()
                 .clipShape(.rect(cornerRadius: 10))
+            
+            
+            StackExampleView(selectedValue: $selectedElement, selectionArray: ["globe", "wrench", "person", "bubble", "person.3"])
+            
+            Text("Du hast \(selectedElement) ausgewählt!")
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(background)
