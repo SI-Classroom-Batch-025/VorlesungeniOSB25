@@ -13,6 +13,67 @@
 		DE46F72D2D880DD000C62C53 /* 02. States.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "02. States.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		DE46F9DA2D8ABB6300C62C53 /* Exceptions for "02. States" folder in "01. Grundlagen" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Assets.xcassets,
+				AuthView.swift,
+				BackgroundExample.swift,
+				ChatMessageView.swift,
+				ChatView.swift,
+				ContactView.swift,
+				ContentView.swift,
+				CounterView.swift,
+				DarkmodeView.swift,
+				EnumPickerExampleView.swift,
+				ExampleNilView.swift,
+				ForYouPageView.swift,
+				Models/AppUser.swift,
+				Models/CarManifacturer.swift,
+				Models/Chat.swift,
+				Models/Message.swift,
+				MultiplyView.swift,
+				NumberView.swift,
+				PickerExampleView.swift,
+				"Preview Content/Preview Assets.xcassets",
+				StackExampleView.swift,
+				StatesApp.swift,
+				UserListView.swift,
+			);
+			target = DE46F3D12D7F16A000C62C53 /* 01. Grundlagen */;
+		};
+		DE46F9DB2D8ABB6300C62C53 /* Exceptions for "02. States" folder in "02. States" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Assets.xcassets,
+				AuthView.swift,
+				BackgroundExample.swift,
+				ChatMessageView.swift,
+				ChatView.swift,
+				ContactView.swift,
+				ContentView.swift,
+				CounterView.swift,
+				DarkmodeView.swift,
+				EnumPickerExampleView.swift,
+				ExampleNilView.swift,
+				ForYouPageView.swift,
+				Models/AppUser.swift,
+				Models/CarManifacturer.swift,
+				Models/Chat.swift,
+				Models/Message.swift,
+				MultiplyView.swift,
+				NumberView.swift,
+				PickerExampleView.swift,
+				"Preview Content/Preview Assets.xcassets",
+				StackExampleView.swift,
+				StatesApp.swift,
+				UserListView.swift,
+			);
+			target = DE46F72C2D880DD000C62C53 /* 02. States */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		DE46F3D32D7F16A000C62C53 /* 01. Grundlagen */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
@@ -24,8 +85,12 @@
 			path = "01. Grundlagen WH";
 			sourceTree = "<group>";
 		};
-		DE46F72E2D880DD000C62C53 /* 02. States */ = {
+		DE46F9C32D8ABB6300C62C53 /* 02. States */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				DE46F9DA2D8ABB6300C62C53 /* Exceptions for "02. States" folder in "01. Grundlagen" target */,
+				DE46F9DB2D8ABB6300C62C53 /* Exceptions for "02. States" folder in "02. States" target */,
+			);
 			path = "02. States";
 			sourceTree = "<group>";
 		};
@@ -59,10 +124,10 @@
 		DE46F2812D7ED25200C62C53 = {
 			isa = PBXGroup;
 			children = (
+				DE46F9C32D8ABB6300C62C53 /* 02. States */,
 				DE46F29B2D7ED26C00C62C53 /* .gitignore */,
 				DE46F3D32D7F16A000C62C53 /* 01. Grundlagen */,
 				DE46F68A2D841AC900C62C53 /* 01. Grundlagen WH */,
-				DE46F72E2D880DD000C62C53 /* 02. States */,
 				DE46F28B2D7ED25200C62C53 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -94,6 +159,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				DE46F3D32D7F16A000C62C53 /* 01. Grundlagen */,
+				DE46F9C32D8ABB6300C62C53 /* 02. States */,
 			);
 			name = "01. Grundlagen";
 			packageProductDependencies = (
@@ -135,9 +201,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				DE46F72E2D880DD000C62C53 /* 02. States */,
 			);
 			name = "02. States";
 			packageProductDependencies = (
