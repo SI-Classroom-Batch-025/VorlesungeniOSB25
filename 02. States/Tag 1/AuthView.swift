@@ -12,6 +12,12 @@ struct AuthView: View {
     @State private var password = ""
     @State private var showRegister = false
     @State private var isLoggedIn = false
+    @State private var showPassword = false
+    @State private var passwordIsValid = false
+    
+    var loginIsEnabled: Bool {
+        !passwordIsValid || username.isEmpty
+    }
     
     var body: some View {
         if isLoggedIn {
@@ -21,9 +27,39 @@ struct AuthView: View {
                 TextField("Username", text: $username)
                     .textFieldStyle(.roundedBorder)
                 // Man kann natürlich auch seinen eigenen Textfielstyle machen, textfelder die sicherheitshalber nicht einfach so eingesehen werden sollen, sind SecureField, dazu aber in den kommenden Tagen mehr!
-                SecureField("Password", text: $password)
-                    .textFieldStyle(.roundedBorder)
-                    .padding(.bottom, 30)
+                VStack {
+                    if showPassword {
+                        TextField("Password", text: $password)
+                    } else {
+                        SecureField("Password", text: $password)
+                    }
+                }
+                .textFieldStyle(.roundedBorder)
+                .overlay {
+                    HStack {
+                        Spacer()
+                        Button {
+                            showPassword.toggle()
+                        } label: {
+                            Image(systemName: showPassword ? "eye.slash" : "eye")
+                        }
+                    }
+                    .padding()
+                    .foregroundStyle(.black)
+                }
+                .padding(.bottom, 30)
+                .onChange(of: password) { oldValue, newValue in
+                    if newValue.count >= 6 {
+                        passwordIsValid = true
+                    } else {
+                        passwordIsValid = false
+                    }
+                }
+                
+                if !passwordIsValid {
+                    Text("Das Passwort muss länger sein!")
+                        .foregroundStyle(.white)
+                }
                 
                 Button {
                     isLoggedIn = true
@@ -34,6 +70,7 @@ struct AuthView: View {
                 .buttonStyle(.borderedProminent)
                 .tint(.yellow)
                 .foregroundStyle(.black)
+                .disabled(loginIsEnabled)
                 
                 Button(showRegister ? "Möchtest du dich einloggen?" : "Noch kein Konto?") {
                     showRegister.toggle()
