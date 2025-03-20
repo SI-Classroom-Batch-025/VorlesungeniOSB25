@@ -71,6 +71,7 @@
 				"Tag 3/ExampleNilView.swift",
 				"Tag 3/PickerExampleView.swift",
 				"Tag 3/StackExampleView.swift",
+				"Tag 4/ChartExample.swift",
 				"Tag 4/SmartHomeListView.swift",
 				"Tag 4/UIComponentsView.swift",
 			);
