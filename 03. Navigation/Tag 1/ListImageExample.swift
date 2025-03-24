@@ -7,22 +7,19 @@
 
 import SwiftUI
 
-struct ListElement {
-    var image: String
-    var isFav: Bool = false
-}
-
 struct ListImageExample: View {
 
     @State var toggleFav = false
+    @State var isExpanded = false
+    @State var currentSelectedElement: ListElement?
 
     @State var images = [
-        ListElement(image: "pika"),
-        ListElement(image: "placeholder"),
-        ListElement(image: "cloud"),
-        ListElement(image: "game"),
-        ListElement(image: "sloth"),
-        ListElement(image: "toast"),
+        ListElement(image: "pika", description: "Oh no!"),
+        ListElement(image: "placeholder", description: "...."),
+        ListElement(image: "cloud", description: "Windig"),
+        ListElement(image: "game", description: "Spaßig"),
+        ListElement(image: "sloth", description: "Fühl ich"),
+        ListElement(image: "toast", description: "Ess ich"),
     ]
 
     var body: some View {
@@ -31,6 +28,10 @@ struct ListImageExample: View {
         List($images, id: \.image) { $element in
             if (toggleFav && element.isFav) || !toggleFav {
                 ListItemView(listElement: $element)
+                    .onLongPressGesture {
+                        currentSelectedElement = element
+                        isExpanded = true
+                    }
                     .swipeActions {
                         Button("Delete", role: .destructive) {
                             images.removeAll { elementToRemove in
@@ -38,30 +39,26 @@ struct ListImageExample: View {
                             }
                         }
                     }
-            }
-        }
-    }
-}
-
-struct ListItemView: View {
-
-    @Binding var listElement: ListElement
-
-    var body: some View {
-        HStack {
-            Image(listElement.image)
-                .resizable()
-                .scaledToFit()
-            Spacer()
-            VStack {
-                Image(systemName: listElement.isFav ? "heart.fill" : "heart")
-                    .onTapGesture {
-                        listElement.isFav.toggle()
+                    .swipeActions(edge: .leading) {
+                        Button(
+                            "Favorite",
+                            systemImage: element.isFav ? "trash" : "heart"
+                        ) {
+                            element.isFav.toggle()
+                        }
                     }
-                Text(listElement.image)
             }
         }
-        .frame(height: 100)
+        .overlay {
+            if isExpanded {
+                if let currentSelectedElement {
+                    Image(currentSelectedElement.image)
+                        .onTapGesture {
+                            isExpanded = false
+                        }
+                }
+            }
+        }
     }
 }
 
