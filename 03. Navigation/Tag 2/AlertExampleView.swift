@@ -10,20 +10,25 @@ import SwiftUI
 struct AlertExampleView: View {
     
     @State var showAlert = false
+    @State var imageName = "dog.fill"
     
     var body: some View {
-        Button("Test Alert") {
+        Image(systemName: imageName)
+            .resizable()
+            .scaledToFit()
+        
+        Button("Löschen", role: .destructive) {
             showAlert = true
         }
-        .alert("WICHTIGE NACHRICHT", isPresented: $showAlert) {
-            Button("Bestätigen") {
-                
+        .alert("Soll der Hund vernichtet werden?", isPresented: $showAlert) {
+            Button("Bestätigen", role: .destructive) {
+                imageName = ""
             }
-            Button("Nein", role: .destructive) {
+            Button("Nein") {
                 
             }
         } message: {
-            Text("Alert Alert Alert Alert Alert Alert Alert")
+            Text("Danach ist der Hund weg!")
         }
     }
 }

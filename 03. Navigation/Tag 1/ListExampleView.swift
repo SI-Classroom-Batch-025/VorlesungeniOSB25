@@ -19,7 +19,6 @@ struct ListExampleView: View {
     ]
 
     var body: some View {
-
         List(pupils.keys.sorted(), id: \.self) { key in
             Text("\(key): \(pupils[key] ?? "")")
         }
