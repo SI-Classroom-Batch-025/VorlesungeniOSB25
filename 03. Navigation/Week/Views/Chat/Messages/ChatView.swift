@@ -12,6 +12,9 @@ struct ChatView: View {
     @Binding var chat: Chat
 
     @State var messageInput = ""
+    
+    @State var selectedMessage: Message?
+    @State var showNewMessageSheet = false
 
     var body: some View {
         VStack {
@@ -25,6 +28,9 @@ struct ChatView: View {
                     .listRowBackground(Color.clear)  // Um den systemcolor Hintergrund eines Elementes zu entfernen
                     .listRowSeparator(.hidden)
                     .rotationEffect(.degrees(180)) // Um die Items selber wieder richtig auszurichten
+                    .onTapGesture {
+                        selectedMessage = message
+                    }
             }
             .listStyle(.plain)
             .rotationEffect(.degrees(180)) // Damit die Liste von unten nach oben geht und wir immer den neusten eintrag sofort sehen können
@@ -51,6 +57,12 @@ struct ChatView: View {
                 .scaledToFill()
                 .ignoresSafeArea()
                 .overlay(Color.black.opacity(0.8))
+        }
+        .sheet(item: $selectedMessage) { message in
+            Text(message.id.uuidString)
+            Text(message.fromSelf.description)
+            Text(message.content)
+            Text(message.timestamp.formatted(date: .complete, time: .complete))
         }
     }
 }
