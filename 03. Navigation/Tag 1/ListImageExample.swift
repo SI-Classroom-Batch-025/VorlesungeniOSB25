@@ -12,6 +12,7 @@ struct ListImageExample: View {
     @State var toggleFav = false
     @State var isExpanded = false
     @State var currentSelectedElement: ListElement?
+    @State var showDeletionAlert = false
 
     @State var images = [
         ListElement(image: "pika", description: "Oh no!"),
@@ -33,10 +34,9 @@ struct ListImageExample: View {
                         isExpanded = true
                     }
                     .swipeActions {
-                        Button("Delete", role: .destructive) {
-                            images.removeAll { elementToRemove in
-                                elementToRemove.image == element.image
-                            }
+                        Button("Delete") {
+                            showDeletionAlert = true
+                            currentSelectedElement = element
                         }
                     }
                     .swipeActions(edge: .leading) {
@@ -59,7 +59,21 @@ struct ListImageExample: View {
                 }
             }
         }
+        .alert("Löschen bestätigen", isPresented: $showDeletionAlert) {
+            Button("Bestätigen", role: .destructive) {
+                images.removeAll { elementToRemove in
+                    elementToRemove.image == currentSelectedElement?.image
+                }
+            }
+            Button("Nein") {
+                
+            }
+        } message: {
+            Text("Möchten sie wirklich das Element löschen?")
+        }
     }
+    
+    
 }
 
 #Preview {
