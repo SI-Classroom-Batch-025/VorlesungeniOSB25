@@ -12,8 +12,20 @@ struct SheetExample: View {
     @State var showSheet = false
     @State var textInput = ""
     
+    @Environment(\.dismiss) var dismiss
+    
     var body: some View {
+        Button("BACK") {
+            dismiss()
+        }
         TextField("Test", text: $textInput)
+        
+        NavigationLink {
+            FormExample()
+        } label: {
+            Text("Test navigation in Subview")
+        }
+        
         Button("ShowSheet") {
             showSheet = true
         }
@@ -40,5 +52,7 @@ struct SheetExample: View {
 }
 
 #Preview {
-    SheetExample()
+    NavigationStack {
+        SheetExample()
+    }
 }

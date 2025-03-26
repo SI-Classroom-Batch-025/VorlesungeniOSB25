@@ -17,7 +17,7 @@ struct TabViewExample: View {
     var body: some View {
         TabView {
             Tab("News", systemImage: "envelope") {
-                SheetExample()
+                NavigationStackExample()
             }
             
             Tab("Settings", systemImage: "wrench") {
