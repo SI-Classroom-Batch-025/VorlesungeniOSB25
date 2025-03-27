@@ -9,7 +9,7 @@ import SwiftUI
 
 struct EntityBasedNavigationExample: View {
     
-    var entityList = [
+    private var entityList = [
         Product(name: "Brot", calories: 150),
         Product(name: "Käse", calories: 250),
         Product(name: "Milch", calories: 200),
@@ -18,8 +18,10 @@ struct EntityBasedNavigationExample: View {
         Product(name: "Hänchen", calories: 100),
     ]
     
+    @State private var path = NavigationPath()
+    
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: $path) {
             List(entityList) { product in
                 NavigationLink(value: product) {
                     Text(product.name)
@@ -27,14 +29,18 @@ struct EntityBasedNavigationExample: View {
             }
             .navigationDestination(for: Product.self) { entity in
                 if let index = entityList.firstIndex(of: entity) {
-                    var previous = index > 0 ? entityList[index - 1] : nil
-                    var next = index < (entityList.count - 1) ? entityList[index + 1] : nil
+                    let previous = index > 0 ? entityList[index - 1] : nil
+                    
+                    let next = index < (entityList.count - 1) ? entityList[index + 1] : nil
 
                     EntityDetailView(
                         entity: entity,
                         previous: previous,
-                        next: next
-                    )
+                        next: next,
+                        path: $path
+                    ) {
+                        path.removeLast(path.count)
+                    }
                 }
             }
         }
