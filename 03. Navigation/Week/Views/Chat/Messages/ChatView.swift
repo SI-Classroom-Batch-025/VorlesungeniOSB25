@@ -20,9 +20,10 @@ struct ChatView: View {
         VStack {
             HStack {
                 Text(chat.name)
+                    .font(.title)
+                    .foregroundStyle(.white)
             }
             .frame(maxWidth: .infinity)
-            .background()
             List(chat.messages) { message in
                 MessageItemView(message: message)
                     .listRowBackground(Color.clear)  // Um den systemcolor Hintergrund eines Elementes zu entfernen
@@ -36,19 +37,20 @@ struct ChatView: View {
             .rotationEffect(.degrees(180)) // Damit die Liste von unten nach oben geht und wir immer den neusten eintrag sofort sehen können
             HStack {
                 TextField("...", text: $messageInput)
-                    .textFieldStyle(.roundedBorder)
+                    .textFieldStyle(.appStyle)
                 Button {
                     chat.messages.insert(Message(content: messageInput), at: 0)
                     messageInput = ""
                 } label: {
                     Image(systemName: "paperplane")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 35, height: 35)
                 }
-                .buttonStyle(.borderedProminent)
-                .tint(.black)
-                .foregroundStyle(.yellow)
+                .buttonStyle(.appStyle)
             }
             .padding()
-            .background(.gray)
+            .background(.black)
         }
         //.scrollContentBackground(.hidden) // Wenn ihr Hintergründe anzeigen lassen wollt, muss der Scrollcontent Background vesteckt werden.
         .background {
