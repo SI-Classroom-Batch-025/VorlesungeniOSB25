@@ -12,7 +12,7 @@ import SwiftData
 struct SwiftdataApp: App {
     var body: some Scene {
         WindowGroup {
-            ExampleAuthView()
+            DebugView()
                 .modelContainer(for: [AppUser.self, Product.self])
         }
     }
