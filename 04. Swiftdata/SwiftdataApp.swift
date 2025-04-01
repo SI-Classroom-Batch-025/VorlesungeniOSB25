@@ -6,12 +6,14 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct SwiftdataApp: App {
     var body: some Scene {
         WindowGroup {
             ExampleAuthView()
+                .modelContainer(for: [AppUser.self, Product.self])
         }
     }
 }

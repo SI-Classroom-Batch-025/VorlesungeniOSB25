@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ExampleAuthView: View {
     
@@ -37,4 +38,6 @@ struct ExampleAuthView: View {
 
 #Preview {
     ExampleAuthView()
+        .modelContainer(for: [AppUser.self, Product.self], inMemory: true)
+    // In Previews sollte immer inMemory true gesetzt sein
 }
