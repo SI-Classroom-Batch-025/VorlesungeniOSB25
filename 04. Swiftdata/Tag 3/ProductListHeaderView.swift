@@ -30,7 +30,7 @@ struct ProductListHeaderView: View {
 
             Button("Add Product") {
                 if let price = Double(price) {
-                    let product = Product(name: name, price: price)
+                    let product = Product(name: name, price: price, amount: 10, color: "Rot")
                     self.name = ""
                     self.price = ""
                     context.insert(product)

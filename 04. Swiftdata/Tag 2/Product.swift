@@ -13,10 +13,14 @@ class Product: Identifiable {
     var id: UUID
     var name: String
     var price: Double
+    var amount: Int
+    var color: String
     
-    init(id: UUID = UUID(), name: String, price: Double) {
+    init(id: UUID = UUID(), name: String, price: Double, amount: Int, color: String) {
         self.id = id
         self.name = name
         self.price = price
+        self.amount = amount
+        self.color = color
     }
 }

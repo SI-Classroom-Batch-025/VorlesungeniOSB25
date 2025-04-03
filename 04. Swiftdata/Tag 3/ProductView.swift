@@ -19,5 +19,5 @@ struct ProductView: View {
 
 #Preview {
     ProductView()
-        .modelContainer(for: Product.self)
+        .modelContainer(for: Product.self, inMemory: true)
 }

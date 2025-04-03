@@ -37,7 +37,8 @@ struct DebugView: View {
             Button("Add Product") {
                 let product = Product(
                     name: Array(0...100).randomElement()!.description,
-                    price: Double(Array(0...100).randomElement()!)
+                    price: Double(Array(0...100).randomElement()!),
+                    amount: 10, color: "Rot"
                 )
                 context.insert(product)
             }

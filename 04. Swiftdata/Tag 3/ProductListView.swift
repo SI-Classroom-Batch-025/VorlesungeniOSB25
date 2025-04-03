@@ -11,6 +11,9 @@ import SwiftData
 struct ProductListView: View {
     
     @Query private var products: [Product]
+//    @Query(filter: #Predicate<Product> { product in
+//        product.price < 1000
+//    }, sort: \Product.price) private var products: [Product]
     
 //    var filteredProducts: [Product] {
 //        products.filter {
@@ -47,6 +50,7 @@ struct ProductListView: View {
             .swipeActions {
                 Button("Delete", systemImage: "trash", role: .destructive) {
                     context.delete(product)
+                    try? context.save()
                 }
             }
         }

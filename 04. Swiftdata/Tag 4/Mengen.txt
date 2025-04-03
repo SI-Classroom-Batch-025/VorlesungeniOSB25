@@ -1,0 +1,35 @@
+Lehrer - Fächer
+One - Many
+
+Chat - Message
+One - Many
+
+User - Chat
+Many - Many
+
+Dreieck - Geraden
+One - One
+
+Supermarkt - Produkt
+One - Many
+Many - Many
+
+
+Max ist Kunde der Onlineshopping-Plattform "Amazing". Zuletzt hat Max eine Fahrradpumpe, einen Fußball und neue Socken bestellt. Im Code modellierst du ein Model Customer für einen Kunden und ein Model Order für eine Bestellung. Welche Beziehung haben die Models zueinander?
+Many - Many (Produkt - Bestellung)
+One - Many (Kunde - Bestellung)
+
+In einem Fitnessstudio können sich Mitglieder für verschiedene Kurse anmelden, wie Yoga, Spinning oder Krafttraining. Ein Kurs hat in der Regel zwischen 20 und 30 Teilnehmern. Viele Teilnehmer nehmen an mehreren Kursen teil. Im Code erstellst du ein Model Member für Mitglieder und ein Model Class für Kurse. Welche Beziehung haben die Models zueinander?
+Many - Many
+
+Du erstellst eine Geo-App. Für die Darstellung der Infos erstellst du die Models Country für ein Land und Capital für eine Hauptstadt. Welche Beziehung haben die Models zueinander?
+One - One
+
+Du erstellst eine Musik-App. Für die Darstellung der Infos erstellst du die Models Artist für einen Künstler und Song für ein Lied. Welche Beziehung haben die Models zueinander?
+One - Many (Single Artist - Song)
+Many - Many (Single Artist und Featured Artist - Song)
+
+Du erstellst eine Krankenhaus-Verwaltungs-App. Für die Darstellung der Infos erstellst du die Models Doctor für einen Arzt und Patient für ein Patienten. Welche Beziehung haben die Models zueinander?
+Many - Many (Arzt - Patient)
+One - Many (Arzt - Patient)
+
