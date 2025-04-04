@@ -9,6 +9,7 @@
 /* Begin PBXFileReference section */
 		DE25137C2D9A0D5C00105A87 /* 03. Navigation WH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "03. Navigation WH.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE2513962D9A7ADF00105A87 /* 04. Swiftdata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "04. Swiftdata.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE2521FC2D9FB92C00105A87 /* 04. Swiftdata WH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "04. Swiftdata WH.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE46F29B2D7ED26C00C62C53 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		DE46F3D22D7F16A000C62C53 /* 01. Grundlagen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "01. Grundlagen.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE46F6892D841AC900C62C53 /* 01. Grundlagen WH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "01. Grundlagen WH.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -18,42 +19,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		DE25138E2D9A0DA600105A87 /* Exceptions for "03. Navigation WH" folder in "03. Navigation" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Model/Chat.swift,
-				Model/Message.swift,
-				Model/TabEnum.swift,
-				Util/Styles/ButtonStyles.swift,
-				Util/Styles/TextFieldStyles.swift,
-				Views/AppNavigation.swift,
-				Views/Chat/ChatListItem.swift,
-				Views/Chat/ChatListView.swift,
-				Views/Chat/Messages/ChatView.swift,
-				Views/Chat/Messages/MessageItemView.swift,
-				Views/Components/AnimatedBackground.swift,
-				Views/Settings/SettingsView.swift,
-			);
-			target = DE7904D52D909E5400AFD708 /* 03. Navigation */;
-		};
-		DE25138F2D9A0DA600105A87 /* Exceptions for "03. Navigation WH" folder in "03. Navigation WH" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Model/Chat.swift,
-				Model/Message.swift,
-				Model/TabEnum.swift,
-				Util/Styles/ButtonStyles.swift,
-				Util/Styles/TextFieldStyles.swift,
-				Views/AppNavigation.swift,
-				Views/Chat/ChatListItem.swift,
-				Views/Chat/ChatListView.swift,
-				Views/Chat/Messages/ChatView.swift,
-				Views/Chat/Messages/MessageItemView.swift,
-				Views/Components/AnimatedBackground.swift,
-				Views/Settings/SettingsView.swift,
-			);
-			target = DE25137B2D9A0D5C00105A87 /* 03. Navigation WH */;
-		};
 		DE46F9DA2D8ABB6300C62C53 /* Exceptions for "02. States" folder in "01. Grundlagen" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -122,16 +87,17 @@
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		DE25137D2D9A0D5C00105A87 /* 03. Navigation WH */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				DE25138E2D9A0DA600105A87 /* Exceptions for "03. Navigation WH" folder in "03. Navigation" target */,
-				DE25138F2D9A0DA600105A87 /* Exceptions for "03. Navigation WH" folder in "03. Navigation WH" target */,
-			);
 			path = "03. Navigation WH";
 			sourceTree = "<group>";
 		};
 		DE2513972D9A7ADF00105A87 /* 04. Swiftdata */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "04. Swiftdata";
+			sourceTree = "<group>";
+		};
+		DE2521FD2D9FB92C00105A87 /* 04. Swiftdata WH */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "04. Swiftdata WH";
 			sourceTree = "<group>";
 		};
 		DE46F3D32D7F16A000C62C53 /* 01. Grundlagen */ = {
@@ -174,6 +140,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		DE2513932D9A7ADF00105A87 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE2521F92D9FB92B00105A87 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -229,6 +202,7 @@
 				DE7904D72D909E5400AFD708 /* 03. Navigation */,
 				DE25137D2D9A0D5C00105A87 /* 03. Navigation WH */,
 				DE2513972D9A7ADF00105A87 /* 04. Swiftdata */,
+				DE2521FD2D9FB92C00105A87 /* 04. Swiftdata WH */,
 				DE46F28B2D7ED25200C62C53 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -243,6 +217,7 @@
 				DE7904D62D909E5400AFD708 /* 03. Navigation.app */,
 				DE25137C2D9A0D5C00105A87 /* 03. Navigation WH.app */,
 				DE2513962D9A7ADF00105A87 /* 04. Swiftdata.app */,
+				DE2521FC2D9FB92C00105A87 /* 04. Swiftdata WH.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -292,6 +267,28 @@
 			);
 			productName = "04. Swiftdata";
 			productReference = DE2513962D9A7ADF00105A87 /* 04. Swiftdata.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DE2521FB2D9FB92B00105A87 /* 04. Swiftdata WH */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE2522092D9FB92C00105A87 /* Build configuration list for PBXNativeTarget "04. Swiftdata WH" */;
+			buildPhases = (
+				DE2521F82D9FB92B00105A87 /* Sources */,
+				DE2521F92D9FB92B00105A87 /* Frameworks */,
+				DE2521FA2D9FB92B00105A87 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				DE2521FD2D9FB92C00105A87 /* 04. Swiftdata WH */,
+			);
+			name = "04. Swiftdata WH";
+			packageProductDependencies = (
+			);
+			productName = "04. Swiftdata WH";
+			productReference = DE2521FC2D9FB92C00105A87 /* 04. Swiftdata WH.app */;
 			productType = "com.apple.product-type.application";
 		};
 		DE46F3D12D7F16A000C62C53 /* 01. Grundlagen */ = {
@@ -418,6 +415,9 @@
 					DE2513952D9A7ADF00105A87 = {
 						CreatedOnToolsVersion = 16.0;
 					};
+					DE2521FB2D9FB92B00105A87 = {
+						CreatedOnToolsVersion = 16.0;
+					};
 					DE46F3D12D7F16A000C62C53 = {
 						CreatedOnToolsVersion = 16.0;
 					};
@@ -456,6 +456,7 @@
 				DE7904D52D909E5400AFD708 /* 03. Navigation */,
 				DE25137B2D9A0D5C00105A87 /* 03. Navigation WH */,
 				DE2513952D9A7ADF00105A87 /* 04. Swiftdata */,
+				DE2521FB2D9FB92B00105A87 /* 04. Swiftdata WH */,
 			);
 		};
 /* End PBXProject section */
@@ -469,6 +470,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		DE2513942D9A7ADF00105A87 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE2521FA2D9FB92B00105A87 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -521,6 +529,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		DE2513922D9A7ADF00105A87 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE2521F82D9FB92B00105A87 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -670,6 +685,62 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.syntax.-4--Swiftdata";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DE2522072D9FB92C00105A87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"04. Swiftdata WH/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "de.syntax.-4--Swiftdata-WH";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DE2522082D9FB92C00105A87 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"04. Swiftdata WH/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "de.syntax.-4--Swiftdata-WH";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1093,6 +1164,15 @@
 			buildConfigurations = (
 				DE2513A22D9A7AE200105A87 /* Debug */,
 				DE2513A32D9A7AE200105A87 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE2522092D9FB92C00105A87 /* Build configuration list for PBXNativeTarget "04. Swiftdata WH" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE2522072D9FB92C00105A87 /* Debug */,
+				DE2522082D9FB92C00105A87 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
