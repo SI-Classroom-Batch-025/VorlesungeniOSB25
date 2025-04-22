@@ -16,6 +16,7 @@
 		DE46F72D2D880DD000C62C53 /* 02. States.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "02. States.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE7903552D8D53F000AFD708 /* 02. States WH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "02. States WH.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE7904D62D909E5400AFD708 /* 03. Navigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "03. Navigation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEAFD3232DB6E23B00DCEB3F /* 05. API.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "05. API.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -129,6 +130,11 @@
 			path = "03. Navigation";
 			sourceTree = "<group>";
 		};
+		DEAFD3242DB6E23B00DCEB3F /* 05. API */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "05. API";
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +194,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DEAFD3202DB6E23B00DCEB3F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -203,6 +216,7 @@
 				DE25137D2D9A0D5C00105A87 /* 03. Navigation WH */,
 				DE2513972D9A7ADF00105A87 /* 04. Swiftdata */,
 				DE2521FD2D9FB92C00105A87 /* 04. Swiftdata WH */,
+				DEAFD3242DB6E23B00DCEB3F /* 05. API */,
 				DE46F28B2D7ED25200C62C53 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -218,6 +232,7 @@
 				DE25137C2D9A0D5C00105A87 /* 03. Navigation WH.app */,
 				DE2513962D9A7ADF00105A87 /* 04. Swiftdata.app */,
 				DE2521FC2D9FB92C00105A87 /* 04. Swiftdata WH.app */,
+				DEAFD3232DB6E23B00DCEB3F /* 05. API.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -399,6 +414,28 @@
 			productReference = DE7904D62D909E5400AFD708 /* 03. Navigation.app */;
 			productType = "com.apple.product-type.application";
 		};
+		DEAFD3222DB6E23B00DCEB3F /* 05. API */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DEAFD32E2DB6E23C00DCEB3F /* Build configuration list for PBXNativeTarget "05. API" */;
+			buildPhases = (
+				DEAFD31F2DB6E23B00DCEB3F /* Sources */,
+				DEAFD3202DB6E23B00DCEB3F /* Frameworks */,
+				DEAFD3212DB6E23B00DCEB3F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				DEAFD3242DB6E23B00DCEB3F /* 05. API */,
+			);
+			name = "05. API";
+			packageProductDependencies = (
+			);
+			productName = "05. API";
+			productReference = DEAFD3232DB6E23B00DCEB3F /* 05. API.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -433,6 +470,9 @@
 					DE7904D52D909E5400AFD708 = {
 						CreatedOnToolsVersion = 16.0;
 					};
+					DEAFD3222DB6E23B00DCEB3F = {
+						CreatedOnToolsVersion = 16.0;
+					};
 				};
 			};
 			buildConfigurationList = DE46F2852D7ED25200C62C53 /* Build configuration list for PBXProject "VorlesungeniOSB25" */;
@@ -457,6 +497,7 @@
 				DE25137B2D9A0D5C00105A87 /* 03. Navigation WH */,
 				DE2513952D9A7ADF00105A87 /* 04. Swiftdata */,
 				DE2521FB2D9FB92B00105A87 /* 04. Swiftdata WH */,
+				DEAFD3222DB6E23B00DCEB3F /* 05. API */,
 			);
 		};
 /* End PBXProject section */
@@ -518,6 +559,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DEAFD3212DB6E23B00DCEB3F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -571,6 +619,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		DE7904D22D909E5400AFD708 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEAFD31F2DB6E23B00DCEB3F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1147,6 +1202,62 @@
 			};
 			name = Release;
 		};
+		DEAFD32F2DB6E23C00DCEB3F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"05. API/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "de.syntax.-5--API";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DEAFD3302DB6E23C00DCEB3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"05. API/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "de.syntax.-5--API";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1227,6 +1338,15 @@
 			buildConfigurations = (
 				DE7904E22D909E5500AFD708 /* Debug */,
 				DE7904E32D909E5500AFD708 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DEAFD32E2DB6E23C00DCEB3F /* Build configuration list for PBXNativeTarget "05. API" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEAFD32F2DB6E23C00DCEB3F /* Debug */,
+				DEAFD3302DB6E23C00DCEB3F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

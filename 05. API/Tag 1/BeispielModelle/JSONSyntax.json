@@ -1,0 +1,11 @@
+{
+    "string": "Hallo Welt",
+    "integer": 42,
+    "double": 3.14,
+    "array": [1, 2, 3],
+    "boolean": true,
+    "nullValue": null,
+    "object": {
+         "key": "value"
+    }
+}
