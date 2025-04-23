@@ -65,3 +65,5 @@ fastlane/test_output
 .DS_Store
 
 *.plist
+
+Apikey.swift
