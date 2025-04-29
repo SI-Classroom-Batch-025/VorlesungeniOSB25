@@ -17,7 +17,9 @@ struct AuthView: View {
     var body: some View {
         // Ein check ob eingeloggt oder nicht, passiert automatisch, da loggedInUser @Published ist
         if authViewModel.loggedInUser != nil {
-            ContentView()
+            // AppNavigation(authViewModel: authViewModel)
+            AppNavigation()
+                .environmentObject(authViewModel)
         } else {
             VStack {
                 TextField("Username", text: $authViewModel.username)

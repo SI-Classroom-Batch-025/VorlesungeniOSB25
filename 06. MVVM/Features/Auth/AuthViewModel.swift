@@ -42,4 +42,8 @@ class AuthViewModel: ObservableObject {
         let user = User(username: username, password: password)
         users.append(user)
     }
+    
+    func logout() {
+        loggedInUser = nil
+    }
 }
