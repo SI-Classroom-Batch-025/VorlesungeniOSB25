@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct NavigationWHApp: App {
+    
+    @StateObject private var settingsViewModel = SettingsViewModel()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(settingsViewModel)
         }
     }
 }

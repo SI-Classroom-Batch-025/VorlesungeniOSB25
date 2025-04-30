@@ -9,12 +9,40 @@ import SwiftUI
 
 @MainActor
 class ProductViewModel: ObservableObject {
-    @Published var products: [Product] = [
-        Product(name: "Test1", price: 1.99),
-        Product(name: "Test2", price: 2.99),
-        Product(name: "Test3", price: 5.49),
-        Product(name: "Test4", price: 3.29),
-        Product(name: "Test5", price: 6.39),
-    ]
     
+    @Published var productName = ""
+    @Published var productPrice = "0.0"
+    @Published var showAddSheet = false
+    
+    @Published var products: [Product] = []
+    
+    private var productRepository = LocalProductRepository()
+    
+    init() {
+        getProducts()
+    }
+    
+    func getProducts() {
+        Task {
+            do {
+                self.products = try await productRepository.getProducts()
+            } catch {
+                
+            }
+        }
+    }
+        
+    func deleteProduct(_ product: Product) {
+        productRepository.deleteProduct(product)
+        getProducts()
+    }
+//
+//    func addProduct() {
+//        guard let price = Double(productPrice), !productName.isEmpty else {
+//            return
+//        }
+//        productRepository.addProduct(Product(name: productName, price: price))
+//        showAddSheet = false
+//        getProducts()
+//    }
 }

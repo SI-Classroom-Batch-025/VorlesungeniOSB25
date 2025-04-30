@@ -9,10 +9,9 @@ import SwiftUI
 
 struct AnimatedBackground: View {
     
-    @Binding var colors: [Color]
-    
-    private var opacityColors: [Color] {
-        colors.map { color in
+    @EnvironmentObject private var settingsViewModel: SettingsViewModel
+    var opacityColors: [Color] {
+        settingsViewModel.backgroundColors.map { color in
             color.opacity(opacity)
         }
     }
@@ -39,5 +38,6 @@ struct AnimatedBackground: View {
 }
 
 #Preview {
-    AnimatedBackground(colors: .constant([.yellow, .orange, .red]))
+    AnimatedBackground()
+        .environmentObject(SettingsViewModel())
 }

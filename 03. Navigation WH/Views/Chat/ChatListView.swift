@@ -8,25 +8,12 @@
 import SwiftUI
 
 struct ChatListView: View {
-    
-    @State var chats: [Chat] = [
-        Chat(name: "Boss", image: "cloud", messages: [
-            Message(fromSelf: false, content: "Mir fehlt noch das und das"),
-            Message(fromSelf: false, content: "Was geht!"),
-            Message(content: "Hallo!"),
-        ]),
-        Chat(name: "Kollege", image: "sloth", messages: [
-            Message(fromSelf: false, content: "Lass mal nachher Bowlen gehen"),
-            Message(fromSelf: false, content: "Was geht!"),
-            Message(content: "Hallo!"),
-        ])
-    ]
-    
-    @Binding var colors: [Color]
+
+    @StateObject private var chatViewModel = ChatViewModel()
     
     var body: some View {
         NavigationStack {
-            List($chats) { $chat in
+            List($chatViewModel.chats) { $chat in
                 NavigationLink {
                     ChatView(chat: $chat)
                 } label: {
@@ -38,9 +25,14 @@ struct ChatListView: View {
                 .overlay {
                     ChatListItem(chat: chat)
                 }
+                .swipeActions {
+                    Button("Delte", role: .destructive) {
+                        chatViewModel.deleteChat(chat)
+                    }
+                }
             }
             .listStyle(.plain)
-            .background(AnimatedBackground(colors: $colors))
+            .background(AnimatedBackground())
         }
         //.scrollContentBackground(.hidden)
         // Wenn listtyle nicht .plain ist, kann man mit diesem Modifier den Hintergrund der Liste ausblenden und seinen eigenen anzeigen
@@ -49,5 +41,6 @@ struct ChatListView: View {
 }
 
 #Preview {
-    ChatListView(colors: .constant([.yellow, .orange, .red]))
+    ChatListView()
+        .environmentObject(SettingsViewModel())
 }

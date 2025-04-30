@@ -21,7 +21,7 @@ struct ProductListView: View {
                     ProductDetailView(product: product)
                 } label: {
                     HStack {
-                        Text(product.name)
+                        Text(product.title)
                         Spacer()
                         Text(product.price.description)
                     }
@@ -31,9 +31,30 @@ struct ProductListView: View {
                         cartViewModel.addToCart(product)
                     }
                 }
+                .swipeActions(edge: .leading) {
+                    Button("Remove", role: .destructive) {
+                        productViewModel.deleteProduct(product)
+                    }
+                }
             }
             .scrollContentBackground(.hidden)
             .background(settingsViewModel.color)
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        productViewModel.showAddSheet = true
+                    } label: {
+                        Image(systemName: "plus")
+                    }
+                }
+            }
+            .sheet(isPresented: $productViewModel.showAddSheet) {
+                TextField("Produktname", text: $productViewModel.productName)
+                TextField("Produktname", text: $productViewModel.productPrice)
+                Button("Produkt hinzufügen") {
+//                    productViewModel.addProduct()
+                }
+            }
         }
         
     }

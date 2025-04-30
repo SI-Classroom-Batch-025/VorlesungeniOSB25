@@ -25,7 +25,7 @@ struct CartView: View {
     var body: some View {
         List(cartViewModel.cart) { product in
             HStack {
-                Text(product.name)
+                Text(product.title)
                 Spacer()
                 Text(product.price.description)
                 Button {

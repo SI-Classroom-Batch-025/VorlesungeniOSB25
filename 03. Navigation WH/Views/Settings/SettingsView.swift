@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SettingsView: View {
     
-    @Binding var colors: [Color]
+    @EnvironmentObject private var settingsViewModel: SettingsViewModel
     
     var colorSelection: [Color] = [
         .yellow,
@@ -61,7 +61,7 @@ struct SettingsView: View {
             }
             
             Section("Backgroundcolors") {
-                ForEach($colors, id: \.description) { $color in
+                ForEach($settingsViewModel.backgroundColors, id: \.description) { $color in
                     Picker("Background Color", selection: $color) {
                         ForEach(colorSelection, id: \.description) { selectionColor in
                             Text(selectionColor.description.capitalized).tag(selectionColor)
@@ -98,6 +98,6 @@ struct SettingsView: View {
 }
 
 #Preview {
-    @Previewable @State var colors: [Color] = [.yellow, .orange, .red]
-    SettingsView(colors: $colors)
+    SettingsView()
+        .environmentObject(SettingsViewModel())
 }

@@ -14,7 +14,6 @@ struct AppNavigation: View {
         UITabBar.appearance().unselectedItemTintColor = .white
     }
     
-    @State var backgroundColors: [Color] = [.yellow, .orange, .red]
     
     var body: some View {
         TabView {
@@ -24,10 +23,10 @@ struct AppNavigation: View {
 //                }
 //            }
             Tab("Chat", systemImage: "bubble") {
-                ChatListView(colors: $backgroundColors)
+                ChatListView()
             }
             Tab("Settings", systemImage: "wrench") {
-                SettingsView(colors: $backgroundColors)
+                SettingsView()
             }
         }
         .tint(.yellow)
@@ -36,4 +35,5 @@ struct AppNavigation: View {
 
 #Preview {
     AppNavigation()
+        .environmentObject(SettingsViewModel())
 }

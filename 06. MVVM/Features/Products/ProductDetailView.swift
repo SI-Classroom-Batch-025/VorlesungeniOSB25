@@ -12,12 +12,12 @@ struct ProductDetailView: View {
     let product: Product
     
     var body: some View {
-        Text(product.name)
-        Text(product.id.uuidString)
+        Text(product.title)
+        Text(product.id.description)
         Text(product.price.description)
     }
 }
 
 #Preview {
-    ProductDetailView(product: Product(name: "TEST", price: 0.00))
+    ProductDetailView(product: Product(id: 0, title: "TEST", price: 0.0, description: "DASD", category: "TESTCAT", image: "ASDQWEQWE"))
 }
