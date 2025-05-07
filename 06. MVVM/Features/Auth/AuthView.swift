@@ -33,7 +33,9 @@ struct AuthView: View {
                 Button(showRegister ? "Zum Einloggen" : "Zum Registrieren") {
                     showRegister.toggle()
                 }
-                                
+                
+                Text("Testmergeconflict")
+
                 Text(authViewModel.errorText)
                     .foregroundStyle(.red)
             }
