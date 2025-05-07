@@ -7,7 +7,7 @@
 
 import Foundation
 
-class RemoteProductRepository {
+class RemoteProductRepository: ProductRepository {
     
     
     func getProducts() async throws -> [Product] {
@@ -32,3 +32,27 @@ class RemoteProductRepository {
         
     }
 }
+
+/*
+ let result = try JSONDecoder().decode(OuterObject.self, from: data)
+ {
+    "id": 1
+    "text": "hallo"
+    "subObject": {
+        "text": "welt"
+    }
+ 
+ }
+ 
+ let outerObject = OuterObject(id: 1, text: "hallo", subObject: SubObject(text: "welt"))
+ */
+
+//struct OuterObject: Codable {
+//    var id: Int
+//    var text: String
+//    var subObject: SubObject
+//}
+//
+//struct SubObject: Codable {
+//    var text: String
+//}

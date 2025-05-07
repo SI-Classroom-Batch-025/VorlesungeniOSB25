@@ -10,7 +10,7 @@ import SwiftUI
 struct ProductListView: View {
     
     // Beispielhaft, das es viele ViewModels innerhalb einer View geben kann
-    @StateObject private var productViewModel = ProductViewModel()
+    @StateObject private var productViewModel = ProductViewModel(productRepository: RemoteProductRepository())
     @ObservedObject var cartViewModel: CartViewModel
     @EnvironmentObject var settingsViewModel: SettingsViewModel
     
