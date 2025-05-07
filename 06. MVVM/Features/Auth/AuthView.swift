@@ -10,7 +10,7 @@ import SwiftUI
 struct AuthView: View {
     
     // StateObject hat immer eine initialisation also immer ein "=" Zeichen
-    @StateObject private var authViewModel = AuthViewModel()
+    @StateObject private var authViewModel = AuthViewModel(userRepository: LocalUserRepository())
     // View spezifische Variablen, die nichts mit Logik zu tun haben, können auch in der View behalten werden. Man kann sie auch in das ViewModel mitnehmen.
     @State private var showRegister = false
     
@@ -34,8 +34,8 @@ struct AuthView: View {
                     showRegister.toggle()
                 }
                 
-                Text("TESTCOMMIT2")
-                
+                Text("Testmergeconflict")
+
                 Text(authViewModel.errorText)
                     .foregroundStyle(.red)
             }
@@ -46,4 +46,5 @@ struct AuthView: View {
 
 #Preview {
     AuthView()
+        .environmentObject(SettingsViewModel())
 }

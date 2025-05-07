@@ -29,6 +29,6 @@ struct SettingsView: View {
 
 #Preview {
     SettingsView()
-        .environmentObject(AuthViewModel())
+        .environmentObject(AuthViewModel(userRepository: LocalUserRepository()))
         .environmentObject(SettingsViewModel())
 }

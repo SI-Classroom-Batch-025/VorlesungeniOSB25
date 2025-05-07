@@ -5,7 +5,7 @@
 //  Created by Felix B on 30.04.25.
 //
 
-class LocalProductRepository {
+class LocalProductRepository: ProductRepository {
     
     private var products: [Product] = [
         Product(id: 0, title: "Test1", price: 1.99, description: "Test1Desc", category: "cat1", image: "image1"),

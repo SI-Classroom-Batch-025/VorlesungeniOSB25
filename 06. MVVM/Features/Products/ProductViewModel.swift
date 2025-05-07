@@ -16,9 +16,10 @@ class ProductViewModel: ObservableObject {
     
     @Published var products: [Product] = []
     
-    private var productRepository = LocalProductRepository()
+    private var productRepository: ProductRepository
     
-    init() {
+    init(productRepository: ProductRepository) {
+        self.productRepository = productRepository
         getProducts()
     }
     
