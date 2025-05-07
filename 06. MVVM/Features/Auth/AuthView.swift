@@ -34,7 +34,7 @@ struct AuthView: View {
                     showRegister.toggle()
                 }
                 
-                Text("TESTCOMMIT")
+                Text("TESTCOMMIT2")
                 
                 Text(authViewModel.errorText)
                     .foregroundStyle(.red)
