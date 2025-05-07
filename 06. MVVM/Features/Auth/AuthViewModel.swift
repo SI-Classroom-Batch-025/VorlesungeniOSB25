@@ -19,28 +19,35 @@ class AuthViewModel: ObservableObject {
     }
     // Published property wrapper ist dafür da das wir Eigenschaften "Freigeben" für die View, damit diese beobachtet werden können und die View sich damit automatisch bei Änderung aktualisiert.
     @Published var password: String = ""
+    @Published var name: String = ""
+    @Published var city: String = ""
     @Published var errorText: String = ""
     @Published var loggedInUser: User?
     
-    private var users: [User] = []
+    private let userRepository: UserRepository
+    
+    init(userRepository: UserRepository) {
+        self.userRepository = userRepository
+    }
     
     func login() {
-        guard let existingUser = users.first(where: { user in
-            user.username.lowercased() == username.lowercased() && user.password == password
-        }) else {
-            errorText = "Fehler beim einloggen, User konnte nicht gefunden werden oder Passwort ist falsch."
+        guard !username.isEmpty || !password.isEmpty else {
+            errorText = "Username und Passwort muss ausgefüllt sein."
             return
         }
-        loggedInUser = existingUser
+        Task {
+            loggedInUser = await userRepository.login(username: username, password: password)
+        }
     }
     
     func register() {
-        guard !username.isEmpty && !password.isEmpty else {
-            errorText = "Fehler beim registrieren, Nutzername oder Passwort ist leer."
+        guard !username.isEmpty || !password.isEmpty else {
+            errorText = "Username und Passwort muss ausgefüllt sein."
             return
         }
-        let user = User(username: username, password: password)
-        users.append(user)
+        Task {
+            loggedInUser = await userRepository.register(username: username, password: password, name: name, city: city)
+        }
     }
     
     func logout() {
