@@ -18,6 +18,12 @@ struct AuthView: View {
             Button("Logout") {
                 authViewModel.logout()
             }
+            
+            if let user = authViewModel.appUser {
+                Text(user.username)
+                Text(user.pokedollar.description)
+                Text(user.chatIDs.description)
+            }
         } else {
             
             VStack {
