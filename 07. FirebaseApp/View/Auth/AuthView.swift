@@ -13,16 +13,9 @@ struct AuthView: View {
     
     var body: some View {
         if authViewModel.isLoggedIn {
-            Text(authViewModel.user?.uid ?? "KEINE UID")
-            Text("\(authViewModel.user?.isAnonymous ?? false)")
+            ChatListView()
             Button("Logout") {
                 authViewModel.logout()
-            }
-            
-            if let user = authViewModel.appUser {
-                Text(user.username)
-                Text(user.pokedollar.description)
-                Text(user.chatIDs.description)
             }
         } else {
             
