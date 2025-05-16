@@ -13,31 +13,26 @@ class AuthViewModel: ObservableObject {
     @Published var user: User?
     @Published var email: String = ""
     @Published var password: String = ""
-    @Published var appUser: AppUser?
     
-    var isLoggedIn: Bool {
-        user != nil
-    }
+    var isLoggedIn: Bool { user != nil }
     
-    private let auth = Auth.auth()
+    private let auth = FirebaseService.instance.auth
     private let userRepo = RemoteUserRepository()
+    private var authListener: NSObjectProtocol?
     
     init() {
-        checkLoggedIn()
+        checkLogin()
+        addAuthListener()
     }
     
-    func checkLoggedIn() {
-        guard let user = auth.currentUser else {
-            return
+    func checkLogin() {
+        if let user = auth.currentUser {
+            self.user = user
         }
-        self.user = user
-        Task {
-            do {
-                self.appUser = try await userRepo.getUserByID(user.uid)
-            } catch {
-                print(error)
-            }
-        }
+    }
+    
+    func signInEmailPassword() {
+        auth.signIn(withEmail: email, password: password)
     }
     
     func registerWithEmailPassword() {
@@ -46,20 +41,6 @@ class AuthViewModel: ObservableObject {
                 let result = try await auth.createUser(withEmail: email, password: password)
                 let appUser = AppUser(id: result.user.uid, username: email)
                 try userRepo.createUser(appUser)
-                self.user = result.user
-                self.appUser = appUser
-            } catch {
-                print(error)
-            }
-        }
-    }
-    
-    func signInEmailPassword() {
-        Task {
-            do {
-                let result = try await auth.signIn(withEmail: email, password: password)
-                self.appUser = try await userRepo.getUserByID(result.user.uid)
-                self.user = result.user
             } catch {
                 print(error)
             }
@@ -72,18 +53,16 @@ class AuthViewModel: ObservableObject {
                 let result = try await auth.signInAnonymously()
                 let appUser = AppUser(id: result.user.uid, username: "")
                 try userRepo.createUser(appUser)
-                self.user = result.user
-                self.appUser = appUser
             } catch {
                 print(error)
             }
         }
     }
     
-    func logout() {
-        try? auth.signOut()
-        self.user = nil
-        self.appUser = nil
+    func addAuthListener() {
+        self.authListener = auth.addStateDidChangeListener { [weak self] auth, user in
+            self?.user = user
+        }
     }
 }
 

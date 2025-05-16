@@ -10,30 +10,49 @@ import SwiftUI
 struct AuthView: View {
     
     @StateObject private var authViewModel = AuthViewModel()
+    @State private var showRegister = false
     
     var body: some View {
         if authViewModel.isLoggedIn {
-            ChatListView()
-            Button("Logout") {
-                authViewModel.logout()
-            }
+            AppNavigation()
         } else {
-            
-            VStack {
+            VStack(spacing: 20) {
+                LogoView()
+                    .padding(.top, 30)
+                
                 TextField("Email", text: $authViewModel.email)
+                    .textFieldStyle(.appStyle)
+                
                 SecureField("Password", text: $authViewModel.password)
-                Button("LoginEmail") {
-                    authViewModel.signInEmailPassword()
+                    .textFieldStyle(.appStyle)
+                
+                Button(showRegister ? "Register" : "Login") {
+                    showRegister
+                    ? authViewModel.registerWithEmailPassword()
+                    : authViewModel.signInEmailPassword()
                 }
-                Button("RegisterEmail") {
-                    authViewModel.registerWithEmailPassword()
+                .font(.title)
+                .buttonStyle(.appStyle)
+                .padding(.top, 30) // Button
+                
+                HStack {
+                    Button(showRegister ? "Got an account?" : "Register here") {
+                        showRegister.toggle()
+                    } // Button
+                    
+                    Spacer()
+                    
+                    Button("AnonLogin") {
+                        authViewModel.signInAnon()
+                    }
                 }
-                Button("LoginAnon") {
-                    authViewModel.signInAnon()
-                }
+                .foregroundStyle(.siYellow) // HStack
+                
+                Spacer()
             }
             .padding()
-        }
+            .background(.siDeepPurple) // VStack
+        } // if-else
     }
 }
 

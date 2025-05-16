@@ -6,37 +6,39 @@
 //
 
 import SwiftUI
+import FirebaseFirestore
 
 @MainActor
 class ChatViewModel: ObservableObject {
     @Published var chats: [Chat] = []
     @Published var newChatName = ""
-    @Published var username = ""
+    @Published var showAddChatSheet = false
     
     private let chatRepo = RemoteChatRepository()
-    private let userRepo = RemoteUserRepository()
     private let fireService = FirebaseService.instance
+    private var listener: ListenerRegistration?
     
     init() {
-        getChats()
+        addChatListener()
     }
     
-    func getChats() {
-        Task {
-            do {
-                guard let id = fireService.userID else { return }
-                self.chats = try await chatRepo.getChats(id)
-            } catch {
-                print(error)
-            }
-        }
-    }
+//    func getChats() {
+//        Task {
+//            do {
+//                guard let id = fireService.userID else { return }
+//                self.chats = try await chatRepo.getChats(id)
+//            } catch {
+//                print(error)
+//            }
+//        }
+//    }
     
     func createChat() {
         do {
             guard let userID = fireService.userID else { return }
             let chat = Chat(name: newChatName, memberIDs: [userID])
             try chatRepo.createChat(chat)
+            showAddChatSheet = false
         } catch {
             print(error)
         }
@@ -47,19 +49,10 @@ class ChatViewModel: ObservableObject {
         chatRepo.deleteChat(chatID: id)
     }
     
-    func addUserToChat(_ chat: Chat) {
-        Task {
-            do {
-                guard let id = chat.id else { return }
-                guard let userID = try await userRepo.getUserByUsername(username).id else { return }
-                chatRepo.addUserToChat(chatID: id, userID: userID) // TODO: Umschreiben, damit addUserToChat username statt userID annimmt.
-            } catch {
-                print(error)
-            }
+    func addChatListener() {
+        guard let userID = fireService.userID else { return }
+        listener = chatRepo.addChatSnapshotListener(userID: userID) { [weak self] chats in
+            self?.chats = chats
         }
-    }
-    
-    func removeUserFromChat() {
-        
     }
 }

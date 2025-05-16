@@ -17,7 +17,7 @@ class RemoteChatRepository: ChatRepository {
     
     func getChats(_ userID: String) async throws -> [Chat] { // Read (Alle oder ein Document -> Get)
         try await collectionRef
-            .whereField("memberIDs", arrayContainsAny: [userID])
+            .whereField("memberIDs", arrayContains: userID)
             .getDocuments() // Machen ein Abbild von der Collection zu dem Zeitpunkt
             .documents // Betrachten alle Dokumente
             .compactMap { snapshot in // CompactMap zum umwandeln in unsere Modelle
@@ -27,13 +27,11 @@ class RemoteChatRepository: ChatRepository {
     
     func addUserToChat(chatID: String, userID: String) { // Update (document(id) -> update)
         let data = ["memberIDs": FieldValue.arrayUnion([userID])]
-        
         collectionRef.document(chatID).updateData(data)
     }
     
     func removeUserFromChat(chatID: String, userID: String) { // Update (document(id) -> update)
         let data = ["memberIDs": FieldValue.arrayRemove([userID])]
-        
         collectionRef.document(chatID).updateData(data)
     }
     
@@ -41,5 +39,22 @@ class RemoteChatRepository: ChatRepository {
         collectionRef.document(chatID).delete()
     }
     
-    
+    func addChatSnapshotListener(userID: String, onChange: @escaping ([Chat]) -> Void) -> ListenerRegistration? {
+        collectionRef
+            .whereField("memberIDs", arrayContains: userID)
+            .addSnapshotListener { querySnapshot, error in
+                if let error {
+                    print(error)
+                    return
+                }
+                
+                guard let documents = querySnapshot?.documents else { return }
+                
+                let chats = documents.compactMap { snapshot in
+                    try? snapshot.data(as: Chat.self)
+                }
+                
+                onChange(chats)
+            }
+    }
 }
