@@ -19,17 +19,29 @@ struct CardView: View {
         Double(offset.width) / 10
     }
     
+    var offsetColorOpacity: Double {
+        0.0 + abs(Double(offset.width / 400))
+    }
+    
     var body: some View {
+        
         Text(title)
             .frame(width: 200, height: 300)
             .padding(50)
             .background {
                 Color.gray.mix(with: .white, by: 0.6)
             }
+            .overlay {
+                offset.width > 0
+                ? Color.green.opacity(offsetColorOpacity)
+                : offset.width < 0
+                ? Color.red.opacity(offsetColorOpacity)
+                : Color.white.opacity(0.0)
+            }
             .clipShape(.buttonBorder)
             .offset(x: offset.width)
             .rotationEffect(.degrees(rotation))
-            .opacity(1.0 - abs(Double(offset.width / 250)))
+//            .opacity(1.0 - abs(Double(offset.width / 250)))
             .gesture(
                 DragGesture()
                     .onChanged { gesture in
@@ -46,6 +58,7 @@ struct CardView: View {
                     }
             )
             .shadow(color: .black, radius: 4)
+
     }
 }
 
