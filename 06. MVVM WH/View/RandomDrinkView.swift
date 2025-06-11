@@ -10,6 +10,7 @@ import SwiftUI
 struct RandomDrinkView: View {
     
     @ObservedObject var drinkViewModel: DrinkViewModel
+    @AppStorage("isDarkmode") var isDarkmode = false
     
     var body: some View {
         VStack {
@@ -52,7 +53,14 @@ struct RandomDrinkView: View {
             }
             .buttonStyle(.borderedProminent)
             .padding(.top, 30)
+            
+            Button("DarkmodeToggle") {
+                isDarkmode.toggle()
+            }
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(.app)
+        .preferredColorScheme(isDarkmode ? .dark : .light)
     }
 }
 

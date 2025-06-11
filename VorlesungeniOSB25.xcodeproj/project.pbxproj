@@ -40,6 +40,7 @@
 		DEAFEF192DCDE19300DCEB3F /* 06. MVVM WH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "06. MVVM WH.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEC210AF2DE0571000A03CE1 /* TestingExample WH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TestingExample WH.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEC21B462DF8D08200A03CE1 /* BonusMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BonusMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEC220882DFA2A8F00A03CE1 /* BonusLocalization.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BonusLocalization.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -193,6 +194,11 @@
 			path = BonusMap;
 			sourceTree = "<group>";
 		};
+		DEC220892DFA2A8F00A03CE1 /* BonusLocalization */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = BonusLocalization;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -311,6 +317,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DEC220852DFA2A8F00A03CE1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -334,6 +347,7 @@
 				DE4962252DDB17C300D040DD /* ExampleSwiftTestingTests */,
 				DEC210B02DE0571100A03CE1 /* TestingExample WH */,
 				DEC21B472DF8D08200A03CE1 /* BonusMap */,
+				DEC220892DFA2A8F00A03CE1 /* BonusLocalization */,
 				DE46F28B2D7ED25200C62C53 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -357,6 +371,7 @@
 				DE4962242DDB17C300D040DD /* ExampleSwiftTestingTests.xctest */,
 				DEC210AF2DE0571000A03CE1 /* TestingExample WH.app */,
 				DEC21B462DF8D08200A03CE1 /* BonusMap.app */,
+				DEC220882DFA2A8F00A03CE1 /* BonusLocalization.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -718,6 +733,28 @@
 			productReference = DEC21B462DF8D08200A03CE1 /* BonusMap.app */;
 			productType = "com.apple.product-type.application";
 		};
+		DEC220872DFA2A8F00A03CE1 /* BonusLocalization */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DEC220952DFA2A9000A03CE1 /* Build configuration list for PBXNativeTarget "BonusLocalization" */;
+			buildPhases = (
+				DEC220842DFA2A8F00A03CE1 /* Sources */,
+				DEC220852DFA2A8F00A03CE1 /* Frameworks */,
+				DEC220862DFA2A8F00A03CE1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				DEC220892DFA2A8F00A03CE1 /* BonusLocalization */,
+			);
+			name = BonusLocalization;
+			packageProductDependencies = (
+			);
+			productName = BonusLocalization;
+			productReference = DEC220882DFA2A8F00A03CE1 /* BonusLocalization.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -777,6 +814,9 @@
 					DEC21B452DF8D08200A03CE1 = {
 						CreatedOnToolsVersion = 16.0;
 					};
+					DEC220872DFA2A8F00A03CE1 = {
+						CreatedOnToolsVersion = 16.0;
+					};
 				};
 			};
 			buildConfigurationList = DE46F2852D7ED25200C62C53 /* Build configuration list for PBXProject "VorlesungeniOSB25" */;
@@ -812,6 +852,7 @@
 				DE4962232DDB17C300D040DD /* ExampleSwiftTestingTests */,
 				DEC210AE2DE0571000A03CE1 /* TestingExample WH */,
 				DEC21B452DF8D08200A03CE1 /* BonusMap */,
+				DEC220872DFA2A8F00A03CE1 /* BonusLocalization */,
 			);
 		};
 /* End PBXProject section */
@@ -929,6 +970,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DEC220862DFA2A8F00A03CE1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1038,6 +1086,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		DEC21B422DF8D08200A03CE1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEC220842DFA2A8F00A03CE1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -2050,6 +2105,62 @@
 			};
 			name = Release;
 		};
+		DEC220932DFA2A9000A03CE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BonusLocalization/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = de.syntax.BonusLocalization;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DEC220942DFA2A9000A03CE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BonusLocalization/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = de.syntax.BonusLocalization;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -2202,6 +2313,15 @@
 			buildConfigurations = (
 				DEC21B512DF8D08300A03CE1 /* Debug */,
 				DEC21B522DF8D08300A03CE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DEC220952DFA2A9000A03CE1 /* Build configuration list for PBXNativeTarget "BonusLocalization" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEC220932DFA2A9000A03CE1 /* Debug */,
+				DEC220942DFA2A9000A03CE1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
