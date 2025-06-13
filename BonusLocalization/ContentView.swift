@@ -12,16 +12,33 @@ struct ContentView: View {
     @State private var username: String = ""
     @State private var password: String = ""
     
+    // Für Torsten
+    @State private var date: Date = Date()
+    @State private var selectedDate: SelectedDate?
+    @State private var showSheet: Bool = false
+    
     private var usernameCharacterMinsize: Int {
         max(8 - username.count, 0)
     }
-
     
     var body: some View {
         VStack {
             
             Text(Strings.welcomeText)
                 .font(.largeTitle)
+            
+            // Für Torsten
+            HStack {
+                DatePicker("Date", selection: $date)
+//                    .onChange(of: date) { oldValue, newValue in
+//                        showSheet = true
+//                    }
+                Button("Bearbeiten") {
+                    selectedDate = SelectedDate(date: date)
+                }
+            }
+            
+            
             
             // Greifen auf den Wert hinter dem Key "username_hint" in unserem String Katalog zu.
             TextField("username_hint", text: $username)
@@ -39,11 +56,26 @@ struct ContentView: View {
                 
             }
         }
+        .sheet(isPresented: $showSheet) {
+            Text(date.formatted())
+        }
+        .sheet(item: $selectedDate) { selectedDate in
+            Text(selectedDate.date.formatted())
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .padding()
     }
 }
 
 #Preview {
-    ContentView()
-        .environment(\.locale, Locale(identifier: "es"))
+    NavigationStack {
+        ContentView()
+        // Simulieren das das handy auf Spanisch ist (de = Deutsch, en = Englisch usw.)
+            .environment(\.locale, Locale(identifier: "de"))
+    }
+}
+
+struct SelectedDate: Identifiable {
+    var id = UUID()
+    var date: Date
 }
