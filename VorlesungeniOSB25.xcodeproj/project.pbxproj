@@ -29,6 +29,7 @@
 		DE2521FC2D9FB92C00105A87 /* 04. Swiftdata WH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "04. Swiftdata WH.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE2B01262DD32665007638E9 /* 07. FirebaseApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "07. FirebaseApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE3814952E0AEAB0008FE2B5 /* BonusCombine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BonusCombine.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE38179C2E0C9C0A008FE2B5 /* BonusSounds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BonusSounds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE46F29B2D7ED26C00C62C53 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		DE46F3D22D7F16A000C62C53 /* 01. Grundlagen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "01. Grundlagen.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE46F6892D841AC900C62C53 /* 01. Grundlagen WH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "01. Grundlagen WH.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -142,6 +143,11 @@
 			path = BonusCombine;
 			sourceTree = "<group>";
 		};
+		DE38179D2E0C9C0A008FE2B5 /* BonusSounds */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = BonusSounds;
+			sourceTree = "<group>";
+		};
 		DE46F3D32D7F16A000C62C53 /* 01. Grundlagen */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "01. Grundlagen";
@@ -253,6 +259,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		DE3814922E0AEAB0008FE2B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE3817992E0C9C0A008FE2B5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -376,6 +389,7 @@
 				DEC220892DFA2A8F00A03CE1 /* BonusLocalization */,
 				DE0A5B3D2E0207DE003ABDCF /* BonusTipKit */,
 				DE3814962E0AEAB0008FE2B5 /* BonusCombine */,
+				DE38179D2E0C9C0A008FE2B5 /* BonusSounds */,
 				DE46F28B2D7ED25200C62C53 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -402,6 +416,7 @@
 				DEC220882DFA2A8F00A03CE1 /* BonusLocalization.app */,
 				DE0A5B3C2E0207DE003ABDCF /* BonusTipKit.app */,
 				DE3814952E0AEAB0008FE2B5 /* BonusCombine.app */,
+				DE38179C2E0C9C0A008FE2B5 /* BonusSounds.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -542,6 +557,28 @@
 			);
 			productName = BonusCombine;
 			productReference = DE3814952E0AEAB0008FE2B5 /* BonusCombine.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DE38179B2E0C9C0A008FE2B5 /* BonusSounds */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE3817A92E0C9C0B008FE2B5 /* Build configuration list for PBXNativeTarget "BonusSounds" */;
+			buildPhases = (
+				DE3817982E0C9C0A008FE2B5 /* Sources */,
+				DE3817992E0C9C0A008FE2B5 /* Frameworks */,
+				DE38179A2E0C9C0A008FE2B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				DE38179D2E0C9C0A008FE2B5 /* BonusSounds */,
+			);
+			name = BonusSounds;
+			packageProductDependencies = (
+			);
+			productName = BonusSounds;
+			productReference = DE38179C2E0C9C0A008FE2B5 /* BonusSounds.app */;
 			productType = "com.apple.product-type.application";
 		};
 		DE46F3D12D7F16A000C62C53 /* 01. Grundlagen */ = {
@@ -857,6 +894,9 @@
 					DE3814942E0AEAB0008FE2B5 = {
 						CreatedOnToolsVersion = 16.0;
 					};
+					DE38179B2E0C9C0A008FE2B5 = {
+						CreatedOnToolsVersion = 16.0;
+					};
 					DE46F3D12D7F16A000C62C53 = {
 						CreatedOnToolsVersion = 16.0;
 					};
@@ -937,6 +977,7 @@
 				DEC220872DFA2A8F00A03CE1 /* BonusLocalization */,
 				DE0A5B3B2E0207DE003ABDCF /* BonusTipKit */,
 				DE3814942E0AEAB0008FE2B5 /* BonusCombine */,
+				DE38179B2E0C9C0A008FE2B5 /* BonusSounds */,
 			);
 		};
 /* End PBXProject section */
@@ -978,6 +1019,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		DE3814932E0AEAB0008FE2B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE38179A2E0C9C0A008FE2B5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1114,6 +1162,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		DE3814912E0AEAB0008FE2B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE3817982E0C9C0A008FE2B5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1551,6 +1606,62 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = de.syntax.BonusCombine;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DE3817A72E0C9C0B008FE2B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BonusSounds/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = de.syntax.BonusSounds;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DE3817A82E0C9C0B008FE2B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BonusSounds/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = de.syntax.BonusSounds;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -2440,6 +2551,15 @@
 			buildConfigurations = (
 				DE3814A02E0AEAB2008FE2B5 /* Debug */,
 				DE3814A12E0AEAB2008FE2B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE3817A92E0C9C0B008FE2B5 /* Build configuration list for PBXNativeTarget "BonusSounds" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE3817A72E0C9C0B008FE2B5 /* Debug */,
+				DE3817A82E0C9C0B008FE2B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
