@@ -28,6 +28,7 @@
 		DE2513962D9A7ADF00105A87 /* 04. Swiftdata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "04. Swiftdata.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE2521FC2D9FB92C00105A87 /* 04. Swiftdata WH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "04. Swiftdata WH.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE2B01262DD32665007638E9 /* 07. FirebaseApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "07. FirebaseApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE3814952E0AEAB0008FE2B5 /* BonusCombine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BonusCombine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE46F29B2D7ED26C00C62C53 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		DE46F3D22D7F16A000C62C53 /* 01. Grundlagen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "01. Grundlagen.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE46F6892D841AC900C62C53 /* 01. Grundlagen WH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "01. Grundlagen WH.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,6 +135,11 @@
 		DE2B01272DD32666007638E9 /* 07. FirebaseApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "07. FirebaseApp";
+			sourceTree = "<group>";
+		};
+		DE3814962E0AEAB0008FE2B5 /* BonusCombine */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = BonusCombine;
 			sourceTree = "<group>";
 		};
 		DE46F3D32D7F16A000C62C53 /* 01. Grundlagen */ = {
@@ -243,6 +249,13 @@
 				DE2B01362DD32810007638E9 /* FirebaseAnalytics in Frameworks */,
 				DE2B01382DD32810007638E9 /* FirebaseAuth in Frameworks */,
 				DE2B013A2DD32810007638E9 /* FirebaseFirestore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE3814922E0AEAB0008FE2B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +375,7 @@
 				DEC21B472DF8D08200A03CE1 /* BonusMap */,
 				DEC220892DFA2A8F00A03CE1 /* BonusLocalization */,
 				DE0A5B3D2E0207DE003ABDCF /* BonusTipKit */,
+				DE3814962E0AEAB0008FE2B5 /* BonusCombine */,
 				DE46F28B2D7ED25200C62C53 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -387,6 +401,7 @@
 				DEC21B462DF8D08200A03CE1 /* BonusMap.app */,
 				DEC220882DFA2A8F00A03CE1 /* BonusLocalization.app */,
 				DE0A5B3C2E0207DE003ABDCF /* BonusTipKit.app */,
+				DE3814952E0AEAB0008FE2B5 /* BonusCombine.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -505,6 +520,28 @@
 			);
 			productName = "07. FirebaseApp";
 			productReference = DE2B01262DD32665007638E9 /* 07. FirebaseApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DE3814942E0AEAB0008FE2B5 /* BonusCombine */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE3814A22E0AEAB2008FE2B5 /* Build configuration list for PBXNativeTarget "BonusCombine" */;
+			buildPhases = (
+				DE3814912E0AEAB0008FE2B5 /* Sources */,
+				DE3814922E0AEAB0008FE2B5 /* Frameworks */,
+				DE3814932E0AEAB0008FE2B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				DE3814962E0AEAB0008FE2B5 /* BonusCombine */,
+			);
+			name = BonusCombine;
+			packageProductDependencies = (
+			);
+			productName = BonusCombine;
+			productReference = DE3814952E0AEAB0008FE2B5 /* BonusCombine.app */;
 			productType = "com.apple.product-type.application";
 		};
 		DE46F3D12D7F16A000C62C53 /* 01. Grundlagen */ = {
@@ -817,6 +854,9 @@
 					DE2B01252DD32665007638E9 = {
 						CreatedOnToolsVersion = 16.0;
 					};
+					DE3814942E0AEAB0008FE2B5 = {
+						CreatedOnToolsVersion = 16.0;
+					};
 					DE46F3D12D7F16A000C62C53 = {
 						CreatedOnToolsVersion = 16.0;
 					};
@@ -896,6 +936,7 @@
 				DEC21B452DF8D08200A03CE1 /* BonusMap */,
 				DEC220872DFA2A8F00A03CE1 /* BonusLocalization */,
 				DE0A5B3B2E0207DE003ABDCF /* BonusTipKit */,
+				DE3814942E0AEAB0008FE2B5 /* BonusCombine */,
 			);
 		};
 /* End PBXProject section */
@@ -930,6 +971,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		DE2B01242DD32665007638E9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE3814932E0AEAB0008FE2B5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1059,6 +1107,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		DE2B01222DD32665007638E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE3814912E0AEAB0008FE2B5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1440,6 +1495,62 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = de.syntax.FirebaseApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DE3814A02E0AEAB2008FE2B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BonusCombine/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = de.syntax.BonusCombine;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DE3814A12E0AEAB2008FE2B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BonusCombine/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = de.syntax.BonusCombine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -2320,6 +2431,15 @@
 			buildConfigurations = (
 				DE2B01312DD32667007638E9 /* Debug */,
 				DE2B01322DD32667007638E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE3814A22E0AEAB2008FE2B5 /* Build configuration list for PBXNativeTarget "BonusCombine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE3814A02E0AEAB2008FE2B5 /* Debug */,
+				DE3814A12E0AEAB2008FE2B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
