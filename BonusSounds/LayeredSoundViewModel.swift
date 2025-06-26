@@ -26,6 +26,8 @@ class LayeredSoundViewModel: NSObject, AVAudioPlayerDelegate, ObservableObject {
         do {
             // Wir erstellen den Audioplayer, mit dem Dateninhalt von dem Pfad den wir vorher herausgesucht haben.
             let player = try AVAudioPlayer(contentsOf: URL(filePath: path))
+            // Wichtige vergessene Zeile dafür, damit auch darauf geachtet wird, wenn der sound fertig ist
+            player.delegate = self
             audioPlayers.append(player)
             
             
